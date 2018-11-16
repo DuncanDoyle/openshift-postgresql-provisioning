@@ -22,7 +22,7 @@ oc create secret docker-registry red-hat-container-registry \
   --docker-server=https://registry.redhat.io \
   --docker-username="$REGISTRY_REDHAT_IO_USERNAME" \
   --docker-password="$REGISTRY_REDHAT_IO_PASSWORD" \
-  --docker-email="ddoyle@redhat.com"
+  --docker-email="$REGISTRY_REDHAT_IO_USERNAME"
   
 oc secrets link builder red-hat-container-registry --for=pull
 
